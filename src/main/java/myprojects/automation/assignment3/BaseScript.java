@@ -37,8 +37,9 @@ public abstract class BaseScript {
      */
     public static EventFiringWebDriver getConfiguredDriver() {
         WebDriver driver = getDriver();
-
        // TODO configure browser window (set timeouts, browser pindow position) and connect loggers.
+        driver.manage().window().maximize();
+
         throw new UnsupportedOperationException("Method doesn't return configured WebDriver instance");
     }
 }
